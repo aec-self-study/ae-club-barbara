@@ -1,9 +1,9 @@
  {{ config(
-    materialized='table'
+    materialized='view'
  ) }}
  
  select
-  date_trunc(first_order_at, month),
+  date_trunc(first_order_at, month) as datemonth,
   count(*)
  
 from {{ ref('customers') }}

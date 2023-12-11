@@ -1,5 +1,5 @@
 {{ config(
-    materialized='table'
+    materialized='view'
  ) }}
  
 WITH temp_orders_customers AS (
