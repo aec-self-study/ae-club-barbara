@@ -4,7 +4,7 @@
  
  select
   date_trunc(first_order_at, month) as datemonth,
-  count(*)
+  count(*) as COUNTORDERS
  
 from {{ ref('customers') }}
  

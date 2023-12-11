@@ -14,7 +14,7 @@ LEFT JOIN analytics-engineers-club.coffee_shop.orders as o
 ON c.id= o.customer_id
 )
 SELECT
-  customer_id,
+  customer_id AS customer,
   customer_name AS name,
   customer_email AS email,
   MIN(order_created_at) AS first_order_at,
