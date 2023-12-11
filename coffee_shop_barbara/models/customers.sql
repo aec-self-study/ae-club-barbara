@@ -1,4 +1,7 @@
-
+{{ config(
+    materialized='table'
+ ) }}
+ 
 WITH temp_orders_customers AS (
   SELECT
   o.customer_id AS customer_id,
@@ -19,4 +22,4 @@ SELECT
 FROM temp_orders_customers
 GROUP BY 1,2,3
 ORDER BY first_order_at
-LIMIT 5;
+LIMIT 5
